@@ -1,0 +1,21 @@
+{
+  "name": "cypress_api_qax",
+  "version": "1.0.0",
+  "description": "Projeto de teste de API do Mark85",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [
+    "cypress.",
+    "api.",
+    "mark85.",
+    "momgodb",
+    "rabbimq"
+  ],
+  "author": "Elias Siqueira",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
+}
