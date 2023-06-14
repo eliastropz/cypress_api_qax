@@ -1,15 +1,17 @@
 
 
-describe('POST /users', ()=> {
+describe('POST /users', () => {
 
 
-  it('register a new user', ()=> {
+  it('register a new user', () => {
 
     const user = {
       name: 'Elias Siqueira',
       email: 'eliaslsiqueira@gmail.com',
       password: 'pwd123'
     }
+
+    cy.task('deleteUser', user.email)
 
     cy.request({
       url: '/users',
@@ -18,9 +20,7 @@ describe('POST /users', ()=> {
       failOnStatusCode: false
     }).then(response => {
       expect(response.status).to.eq(200)
+      cy.log(JSON.stringify(response.body))
     })
-
   })
-
-
 })
